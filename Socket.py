@@ -54,7 +54,7 @@ while 1:
                 fileobj = c.makefile('r', 0)
                 fileobj.write("GET "+"http://" + filename + "HTTP/1.0\n\n")
                 # Read the response into buffer
-                buffer = file_object.readlines()
+                buffer = fileobj.readlines()
                 # Create a new file in the cache for the requested file.
                 tmpFile = open("./" + filename,"wb")
                 # Also send the response in the buffer to client socket
